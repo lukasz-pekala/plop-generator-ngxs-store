@@ -1,0 +1,16 @@
+{
+  "name": "ngxs-plop-generator",
+  "version": "1.0.0",
+  "description": "plop generator for ngxs",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "keywords": [
+    "ngxs",
+    "plop",
+    "generator"
+  ],
+  "author": "Łukasz Pękala",
+  "license": "ISC"
+}
