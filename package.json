@@ -12,5 +12,8 @@
     "generator"
   ],
   "author": "Łukasz Pękala",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "plop": "^3.1.2"
+  }
 }
