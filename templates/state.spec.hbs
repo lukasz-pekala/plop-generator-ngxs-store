@@ -1,0 +1,24 @@
+import { Store } from '@ngxs/store';
+import { {{FirstLetterUpperCase name }}State } from './{{FirstLetterUpperCase name }}.state';
+import { {{FirstLetterUpperCase name }}StateModel } from './{{FirstLetterUpperCase name }}.types';
+import { fakeAsync, TestBed } from "@angular/core/testing";
+import { NgxsModule } from "@ngxs/store";
+
+describe('{{FirstLetterUpperCase name }}State', () => {
+  let store: Store;
+
+  beforeEach(fakeAsync(() => {
+    TestBed.configureTestingModule({
+      imports: [NgxsModule.forRoot([{{FirstLetterUpperCase name }}State])],
+    }).compileComponents();
+    store = TestBed.inject(Store);
+  }));
+
+  it('should create', () => {
+    expect(store).toBeTruthy();
+  });
+
+  it('should have an initial state', () => {
+    expect(store.selectSnapshot({{FirstLetterUpperCase name }}State)).toEqual<{{FirstLetterUpperCase name }}StateModel>({});
+  });
+});

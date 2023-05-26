@@ -1,0 +1,25 @@
+import { Injectable } from '@angular/core';
+import { State, Action, StateContext, Store } from '@ngxs/store';
+
+export class {{FirstLetterUpperCase name }}StateModel {
+  TODO // TODO define default state
+}
+
+const {{FirstLetterLowerCase name }}State: {{FirstLetterUpperCase name }}StateModel = {
+  TODO // TODO define default state
+};
+
+@State<{{FirstLetterUpperCase name }}StateModel>({
+  name: {{FirstLetterLowerCase name }},
+  defaults: {{FirstLetterLowerCase name }},
+})
+@Injectable()
+export class {{FirstLetterUpperCase name }}State {
+  constructor() {}
+
+}
+
+@Injectable()
+export class {{FirstLetterUpperCase name }}Selector {
+
+}
