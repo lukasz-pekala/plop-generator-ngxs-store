@@ -26,7 +26,6 @@ module.exports = function (plop) {
   // store generator
   plop.setGenerator("store", {
     description: "Generator for NGXS store",
-
     prompts: [
       {
         type: "input",
@@ -36,7 +35,6 @@ module.exports = function (plop) {
           /[a-z]/gi.test(value) ? true : "name is required",
       },
     ],
-
     actions: [
       {
         type: "add",
@@ -45,32 +43,32 @@ module.exports = function (plop) {
       },
       {
         type: "add",
-        path: "store/{{name}}.actions.ts",
+        path: "store/{{KebabCase name}}.actions.ts",
         templateFile: "templates/actions.hbs",
       },
       {
         type: "add",
-        path: "store/{{name}}.constant.ts",
+        path: "store/{{KebabCase name}}.constant.ts",
         templateFile: "templates/constant.hbs",
       },
       {
         type: "add",
-        path: "store/{{name}}.selector.ts",
+        path: "store/{{KebabCase name}}.selector.ts",
         templateFile: "templates/selector.hbs",
       },
       {
         type: "add",
-        path: "store/{{name}}.state.ts",
+        path: "store/{{KebabCase name}}.state.ts",
         templateFile: "templates/state.hbs",
       },
       {
         type: "add",
-        path: "store/{{name}}.state.spec.ts",
+        path: "store/{{KebabCase name}}.state.spec.ts",
         templateFile: "templates/state.spec.hbs",
       },
       {
         type: "add",
-        path: "store/{{name}}.types.ts",
+        path: "store/{{KebabCase name}}.types.ts",
         templateFile: "templates/types.hbs",
       },
     ],
