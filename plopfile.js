@@ -1,27 +1,23 @@
+const {
+  firstLetterUpperCase,
+  firstLetterLowerCase,
+  spaceBetween,
+  toTitleCase,
+  kebabCase,
+} = require("./helpers/helpers.js");
+
 module.exports = function (plop) {
-  plop.setHelper("FirstLetterUpperCase", (str) => {
-    return str.charAt(0).toUpperCase() + str.slice(1);
-  });
+  const helpers = {
+    firstLetterUpperCase,
+    firstLetterLowerCase,
+    spaceBetween,
+    toTitleCase,
+    kebabCase,
+  };
 
-  plop.setHelper("FirstLetterLowerCase", (str) => {
-    return str.charAt(0).toLowerCase() + str.slice(1);
+  Object.entries(helpers).forEach(([name, fn]) => {
+    plop.setHelper(name, fn);
   });
-
-  plop.setHelper("SpaceBetween", (str) => {
-    return str
-      .replace(/([a-z])([A-Z])/g, "$1-$2")
-      .replace(/[\s_]+/g, "-")
-      .toLowerCase()
-      .split("-")
-      .join(" ");
-  });
-
-  plop.setHelper("KebabCase", (str) =>
-    str
-      .replace(/([a-z])([A-Z])/g, "$1-$2")
-      .replace(/[\s_]+/g, "-")
-      .toLowerCase()
-  );
 
   // store generator
   plop.setGenerator("store", {
@@ -43,32 +39,32 @@ module.exports = function (plop) {
       },
       {
         type: "add",
-        path: "store/{{KebabCase name}}.actions.ts",
+        path: "store/{{kebabCase name}}.actions.ts",
         templateFile: "templates/actions.hbs",
       },
       {
         type: "add",
-        path: "store/{{KebabCase name}}.constant.ts",
+        path: "store/{{kebabCase name}}.constant.ts",
         templateFile: "templates/constant.hbs",
       },
       {
         type: "add",
-        path: "store/{{KebabCase name}}.selector.ts",
+        path: "store/{{kebabCase name}}.selector.ts",
         templateFile: "templates/selector.hbs",
       },
       {
         type: "add",
-        path: "store/{{KebabCase name}}.state.ts",
+        path: "store/{{kebabCase name}}.state.ts",
         templateFile: "templates/state.hbs",
       },
       {
         type: "add",
-        path: "store/{{KebabCase name}}.state.spec.ts",
+        path: "store/{{kebabCase name}}.state.spec.ts",
         templateFile: "templates/state.spec.hbs",
       },
       {
         type: "add",
-        path: "store/{{KebabCase name}}.types.ts",
+        path: "store/{{kebabCase name}}.types.ts",
         templateFile: "templates/types.hbs",
       },
     ],
