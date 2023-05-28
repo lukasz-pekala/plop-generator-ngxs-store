@@ -1,6 +1,6 @@
 const {
-  firstLetterUpperCase,
-  firstLetterLowerCase,
+  toPascalCase,
+  toCamelCase,
   spaceBetween,
   toTitleCase,
   kebabCase,
@@ -8,8 +8,8 @@ const {
 
 module.exports = function (plop) {
   const helpers = {
-    firstLetterUpperCase,
-    firstLetterLowerCase,
+    toPascalCase,
+    toCamelCase,
     spaceBetween,
     toTitleCase,
     kebabCase,

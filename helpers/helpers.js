@@ -1,17 +1,21 @@
 module.exports = {
-  firstLetterUpperCase,
-  firstLetterLowerCase,
+  toPascalCase,
+  toCamelCase,
   spaceBetween,
   toTitleCase,
   kebabCase,
 };
 
-function firstLetterUpperCase(str) {
-  return str.charAt(0).toUpperCase() + str.slice(1);
-}
-
-function firstLetterLowerCase(str) {
-  return str.charAt(0).toLowerCase() + str.slice(1);
+function toCamelCase(str) {
+  return str
+    .replace(/-|_/g, " ")
+    .replace(/\b\w/g, function (txt) {
+      return txt.toUpperCase();
+    })
+    .replace(/\s+/g, "")
+    .replace(/^\w/, function (txt) {
+      return txt.toLowerCase();
+    });
 }
 
 function spaceBetween(str) {
@@ -21,6 +25,15 @@ function spaceBetween(str) {
     .toLowerCase()
     .split("-")
     .join(" ");
+}
+
+function toPascalCase(str) {
+  return str
+    .replace(/-|_/g, " ")
+    .replace(/\b\w/g, function (txt) {
+      return txt.toUpperCase();
+    })
+    .replace(/\s+/g, "");
 }
 
 function toTitleCase(str) {

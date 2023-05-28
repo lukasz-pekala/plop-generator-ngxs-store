@@ -1,15 +1,15 @@
 import { Injectable } from '@angular/core';
 import { State } from '@ngxs/store';
-import { default{{firstLetterUpperCase name }}State } from './{{kebabCase name }}.constant';
-import { {{firstLetterUpperCase name }}StateModel } from './{{kebabCase name }}.types';
+import { default{{toPascalCase name }}State } from './{{kebabCase name }}.constant';
+import { {{toPascalCase name }}StateModel } from './{{kebabCase name }}.types';
 
 
-@State<{{firstLetterUpperCase name }}StateModel>({
-  name: '{{firstLetterLowerCase name }}',
-  defaults: default{{firstLetterUpperCase name }}State,
+@State<{{toPascalCase name }}StateModel>({
+  name: '{{toPascalCase name }}',
+  defaults: default{{toPascalCase name }}State,
 })
 @Injectable()
-export class {{firstLetterUpperCase name }}State {
+export class {{toPascalCase name }}State {
   constructor() {}
 
 }
