@@ -26,7 +26,7 @@ module.exports = function (plop) {
       {
         type: "input",
         name: "name",
-        message: "store name please",
+        message: "store name (examples: HelloWorld, hello-world):",
         validate: (value) =>
           /[a-z]/gi.test(value) ? true : "name is required",
       },
