@@ -1,7 +1,7 @@
 {
-  "name": "ngxs-plop-generator",
+  "name": "plop-generator-ngxs-store",
   "version": "1.0.0",
-  "description": "plop generator for ngxs",
+  "description": "plop generator for ngxs state management pattern + library for Angular",
   "main": "index.js",
   "scripts": {
     "plop": "plop",
@@ -9,8 +9,11 @@
   },
   "keywords": [
     "ngxs",
+    "store",
+    "state",
     "plop",
-    "generator"
+    "generator",
+    "jest"
   ],
   "author": "Łukasz Pękala",
   "license": "ISC",
