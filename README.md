@@ -45,7 +45,10 @@ src
 
 ## ❔ Questions
 
-🐛 report bugs by filing [issues][issues]
+🐛 report bugs by filing [issues][issues]  
+📢 provide feedback with [issues][issues] or on [twitter][twitter]
 
+[issues]: https://github.com/lukasz-pekala/plop-generator-ngxs-store/issues
+[twitter]: https://twitter.com/lukasz_pekala
 [plop]: https://plopjs.com
 [ngxs]: https://www.ngxs.io/
