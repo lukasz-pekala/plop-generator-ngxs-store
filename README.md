@@ -1,6 +1,10 @@
-# plop generator ngxs store
+# 💧 plop generator ngxs store
 
-A [`plop`][plop] generator for [`ngxs`][ngxs] state management pattern + library for Angular.
+[![version][version-badge]][npm]
+[![downloads][downloads-badge]][npm]
+[![size][size-badge]][bundlephobia]
+
+A [`plop`][plop] generator for allowing easily create slices of state for [`ngxs`][ngxs] state management pattern + library for Angular.
 
 This package aims to follow closely the [`ngxs style guide`][ngxs-style-guide] .
 
@@ -9,7 +13,7 @@ This package aims to follow closely the [`ngxs style guide`][ngxs-style-guide] .
 This package is hosted on [`npm`][npm].
 
 ```bash
-npm install --save-dev @lukasz-pekala/plop-generator-ngxs-store
+npm install --save-dev plop-generator-ngxs-store
 ```
 
 ## 🥑 Usage
@@ -17,7 +21,7 @@ npm install --save-dev @lukasz-pekala/plop-generator-ngxs-store
 First, be sure you have [`plop`][plop] installed. Then, add the following line to your `plopfile.js`.
 
 ```javascript
-plop.load("@lukasz-pekala/plop-generator-ngxs-store");
+plop.load("plop-generator-ngxs-store");
 ```
 
 Now you'll have access to the `store` generator as shown below.
@@ -31,7 +35,7 @@ Now you'll have access to the `store` generator as shown below.
 
 The `store` generator scaffolds ngxs slice of state. Generated files include actions `.actions.ts`, default state model `.constant.ts`, selectors `.selector.ts`, state `.state.ts`, tests for the state `.state.spec.ts` and state model `.types.ts`.
 Tests are written in jest.
-All the generated files are exported via `index.ts` file for easy importing. The resulting directory looks like this for a hook named `useHook`.
+All the generated files are exported via `index.ts` file for easy importing.
 
 ```text
 src
@@ -50,6 +54,12 @@ src
 🐛 report bugs by filing [issues][issues]  
 📢 provide feedback with [issues][issues] or on [twitter][twitter]
 
+[npm]: https://www.npmjs.com/package/plop-generator-ngxs-store
+[version-badge]: https://img.shields.io/npm/plop-generator-ngxs-store.svg?style=flat-square
+[downloads-badge]: https://img.shields.io/npm/dt/plop-generator-ngxs-store?style=flat-square
+[contributing-badge]: https://img.shields.io/badge/PRs-welcome-success?style=flat-square
+[bundlephobia]: https://bundlephobia.com/result?p=plop-generator-ngxs-store
+[size-badge]: https://img.shields.io/bundlephobia/minzip/plop-generator-ngxs-store?style=flat-square
 [issues]: https://github.com/lukasz-pekala/plop-generator-ngxs-store/issues
 [twitter]: https://twitter.com/lukasz_pekala
 [plop]: https://plopjs.com
