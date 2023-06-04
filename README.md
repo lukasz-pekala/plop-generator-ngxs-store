@@ -1,6 +1,8 @@
 # plop generator ngxs store
 
-_A [`plop`][plop] generator for [`ngxs`][ngxs] state management pattern + library for Angular._
+A [`plop`][plop] generator for [`ngxs`][ngxs] state management pattern + library for Angular.
+
+This package aims to follow closely the [`ngxs style guide`][ngxs-style-guide] .
 
 ## 📦 Installation
 
@@ -52,3 +54,4 @@ src
 [twitter]: https://twitter.com/lukasz_pekala
 [plop]: https://plopjs.com
 [ngxs]: https://www.ngxs.io/
+[ngxs-style-guide]: https://www.ngxs.io/recipes/style-guide
