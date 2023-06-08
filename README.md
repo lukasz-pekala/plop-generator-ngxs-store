@@ -24,10 +24,14 @@ First, be sure you have [`plop`][plop] installed. Then, add the following line t
 plop.load("plop-generator-ngxs-store");
 ```
 
+A minimal `plopfile.js` can be
+```javascript
+module.exports = (plop) => plop.load('plop-generator-ngxs-store');
+```
+
 Now you'll have access to the `store` generator as shown below.
 
 ```bash
-> plop-generator-ngxs-store@1.0.0 plop C:\dev\plop-generator-ngxs-store
 > plop
 
 ? store name (examples: HelloWorld, hello-world): HelloWorld

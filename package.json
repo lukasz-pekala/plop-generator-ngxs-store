@@ -1,8 +1,8 @@
 {
   "name": "plop-generator-ngxs-store",
-  "version": "1.0.0-alpha.3",
+  "version": "1.0.0",
   "description": "plop generator for ngxs state management pattern + library for Angular",
-  "main": "index.js",
+  "main": "plopfile.js",
   "scripts": {
     "plop": "plop",
     "test": "jest"
