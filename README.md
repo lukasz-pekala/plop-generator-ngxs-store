@@ -55,7 +55,7 @@ src
 📢 provide feedback with [issues][issues] or on [twitter][twitter]
 
 [npm]: https://www.npmjs.com/package/plop-generator-ngxs-store
-[version-badge]: https://img.shields.io/npm/plop-generator-ngxs-store.svg?style=flat-square
+[version-badge]: https://img.shields.io/npm/v/plop-generator-ngxs-store?style=flat-square
 [downloads-badge]: https://img.shields.io/npm/dt/plop-generator-ngxs-store?style=flat-square
 [contributing-badge]: https://img.shields.io/badge/PRs-welcome-success?style=flat-square
 [bundlephobia]: https://bundlephobia.com/result?p=plop-generator-ngxs-store
