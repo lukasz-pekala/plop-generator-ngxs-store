@@ -5,6 +5,7 @@ const {
   toTitleCase,
   kebabCase,
 } = require("./helpers/helpers.js");
+const path = require("path");
 
 module.exports = function (plop) {
   const helpers = {
@@ -30,43 +31,57 @@ module.exports = function (plop) {
         validate: (value) =>
           /[a-z]/gi.test(value) ? true : "name is required",
       },
-    ],
-    actions: [
       {
-        type: "add",
-        path: "store/index.ts",
-        templateFile: "templates/index.hbs",
-      },
-      {
-        type: "add",
-        path: "store/{{kebabCase name}}.actions.ts",
-        templateFile: "templates/actions.hbs",
-      },
-      {
-        type: "add",
-        path: "store/{{kebabCase name}}.constant.ts",
-        templateFile: "templates/constant.hbs",
-      },
-      {
-        type: "add",
-        path: "store/{{kebabCase name}}.selector.ts",
-        templateFile: "templates/selector.hbs",
-      },
-      {
-        type: "add",
-        path: "store/{{kebabCase name}}.state.ts",
-        templateFile: "templates/state.hbs",
-      },
-      {
-        type: "add",
-        path: "store/{{kebabCase name}}.state.spec.ts",
-        templateFile: "templates/state.spec.hbs",
-      },
-      {
-        type: "add",
-        path: "store/{{kebabCase name}}.types.ts",
-        templateFile: "templates/types.hbs",
+        type: "input",
+        name: "directory",
+        message: 'directory (default "store"):',
+        default: "store",
       },
     ],
+    actions: function (data) {
+      let dirname = "store";
+
+      if (data.directory) {
+        dirname = data.directory;
+      }
+
+      return [
+        {
+          type: "add",
+          path: path.join(dirname, "index.ts"),
+          templateFile: "templates/index.hbs",
+        },
+        {
+          type: "add",
+          path: path.join(dirname, "{{kebabCase name}}.actions.ts"),
+          templateFile: "templates/actions.hbs",
+        },
+        {
+          type: "add",
+          path: path.join(dirname, "{{kebabCase name}}.constant.ts"),
+          templateFile: "templates/constant.hbs",
+        },
+        {
+          type: "add",
+          path: path.join(dirname, "{{kebabCase name}}.selector.ts"),
+          templateFile: "templates/selector.hbs",
+        },
+        {
+          type: "add",
+          path: path.join(dirname, "{{kebabCase name}}.state.ts"),
+          templateFile: "templates/state.hbs",
+        },
+        {
+          type: "add",
+          path: path.join(dirname, "{{kebabCase name}}.state.spec.ts"),
+          templateFile: "templates/state.spec.hbs",
+        },
+        {
+          type: "add",
+          path: path.join(dirname, "{{kebabCase name}}.types.ts"),
+          templateFile: "templates/types.hbs",
+        },
+      ];
+    },
   });
 };
