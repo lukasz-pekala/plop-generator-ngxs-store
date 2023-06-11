@@ -1,15 +1,15 @@
 import { Store, NgxsModule } from '@ngxs/store';
-import { {{toPascalCase name }}State } from './{{kebabCase name }}.state';
-import { {{toPascalCase name }}StateModel } from './{{kebabCase name }}.types';
+import { {{{toPascalCase name }}}State } from './{{{kebabCase name }}}.state';
+import { {{{toPascalCase name }}}StateModel } from './{{{kebabCase name }}}.types';
 import { fakeAsync, TestBed } from '@angular/core/testing';
 
 
-describe('{{toPascalCase name }}State', () => {
+describe('{{{toPascalCase name }}}State', () => {
   let store: Store;
 
   beforeEach(fakeAsync(() => {
     TestBed.configureTestingModule({
-      imports: [NgxsModule.forRoot([{{toPascalCase name }}State])],
+      imports: [NgxsModule.forRoot([{{{toPascalCase name }}}State])],
     }).compileComponents();
     store = TestBed.inject(Store);
   }));
@@ -19,6 +19,6 @@ describe('{{toPascalCase name }}State', () => {
   });
 
   it('should have an initial state', () => {
-    expect(store.selectSnapshot({{toPascalCase name }}State)).toEqual<{{toPascalCase name }}StateModel>({});
+    expect(store.selectSnapshot({{{toPascalCase name }}}State)).toEqual<{{{toPascalCase name }}}StateModel>({});
   });
 });
